@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Intro to angular.js</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    <article>
+      <section data-bespoke-state="s1">
+        <h1>Angular<span class="c1">JS</span></h1><br>
+        <h3 class="sh">A Brief Introduction</h3>
+      </section>
+      <section data-bespoke-state="s2"><img src="http://websiddu.com/images/sid-default.png" alt="" class="avatar">
+        <h2>Siddharhta Gudipati</h2>
+        <h3 class="sh"><small>Front-end Developer</small></h3>
+        <h3><a href="http://websiddu.com">@websiddu</a></h3>
+      </section>
+      <section data-bespoke-state="s4">
+        <h2>What is Angular<span class="c1">JS</span><span> ?</span></h2><img src="img/brahmiconfused.gif" alt="" width="300px">
+      </section>
+      <section data-bespoke-state="s5">
+        <ul>
+          <h3>
+            <li class="tal">It’s not a JavaScript library (As they say). There are no functions which we can directly call and use.</li>
+          </h3>
+          <h3>
+            <li class="tal">It is not a DOM manipulation library like jQuery. But it uses subset of jQuery for DOM manipulation (called jqLite).</li>
+          </h3>
+          <h3>
+            <li class="tal">Focus more on HTML side of web apps.</li>
+          </h3>
+          <h3>
+            <li class="tal">For MVC/MVVM design pattern</li>
+          </h3>
+        </ul>
+      </section>
+      <section>
+        <h2 class="dark">The MVC</h2><br><img src="img/mvc.png" alt="" width="100%">
+      </section>
+      <section>
+        <h2 class="dark">Then MVVM...</h2><br><img src="img/mvvm.png" alt="" width="100%">
+      </section>
+      <section data-bespoke-state="s6">
+        <h2>Angular Features</h2>
+        <ul>
+          <h3>
+            <li>Modules</li>
+          </h3>
+          <h3>
+            <li>Services</li>
+          </h3>
+          <h3>
+            <li>Expressions</li>
+          </h3>
+          <h3>
+            <li>Filters</li>
+          </h3>
+          <h3>
+            <li>Directives</li>
+          </h3>
+          <h3>
+            <li>Routes</li>
+          </h3>
+          <h3>
+            <li><a href="">And many more..</a></li>
+          </h3>
+        </ul>
+      </section>
+      <section data-bespoke-state="s7">
+        <h2>Bootstraping</h2>
+        <h3>Its just that simple!!</h3>
+        <hr>
+        <pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html ng-app&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="s4">
+        <h2>Mr.Controller</h2>
+        <hr>
+        <pre><code class="language-javascript">var app = angular.module('todoApp', []);
+
+app.controller('todoController', function($scope) {
+  // Your code goes here.
+});
+</code></pre>
+      </section>
+      <section data-bespoke-state="s4">
+        <h2>Mr.Directive</h2>
+        <hr>
+        <pre><code class="language-javascript">var app = angular.module('todoApp', []);
+
+app.directive('custdir', function() {
+  return {
+    restrict: 'E',
+    template: "&lt;b&gt; Hello Mobility!! &lt;/b&gt;",
+    link: function (scope, element, attrs) {
+      // Your logic goes here..
+    }
+  }
+});
+</code></pre>
+      </section>
+      <section data-bespoke-state="s5">
+        <h2>Mr.Factory</h2>
+        <hr>
+        <pre><code class="language-javascript">var app = angular.module('todoApp', []);
+
+app.factory('customerFactory', function($http) {
+    var factory = {};
+    factory.getCustomers = function() {
+      return $http.get('/customer')
+    }
+    return factory;
+});
+</code></pre>
+      </section>
+      <section data-bespoke-state="s1">
+        <h2>Let's build a<span class="c1"> TODO</span><span> App..</span></h2>
+      </section>
+      <section data-bespoke-state="s7">
+        <h1>Questions ?</h1>
+      </section>
+      <section data-bespoke-state="s3">
+        <h1>Thank you!!</h1>
+      </section>
+    </article>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
