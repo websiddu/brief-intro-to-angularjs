@@ -1,0 +1,154 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Intro to angular.js
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300', rel='stylesheet', type='text/css')
+    // build:css styles/styles.css
+    //- Check out 'src/bower_components/prism/themes/' for available themes
+    link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-tomorrow.css')
+    link(rel='stylesheet', type='text/css', href='styles/main.css')
+    // endbuild
+
+  body
+
+    article
+
+      section(data-bespoke-state='s1')
+        h1 Angular
+          span.c1 JS
+        br
+        h3.sh A Brief Introduction
+
+      section(data-bespoke-state='s2')
+        img.avatar(src="http://websiddu.com/images/sid-default.png", alt="")
+        h2 Siddharhta Gudipati
+        h3.sh
+          small Front-end Developer
+        h3
+          a(href="http://websiddu.com") @websiddu
+
+      section(data-bespoke-state='s4')
+        h2 What is Angular
+          span.c1 JS
+          span  ?
+        img(src="img/brahmiconfused.gif", alt="", width='300px')
+
+      section(data-bespoke-state='s5')
+        ul
+          h3
+            li.tal It’s not a JavaScript library (As they say). There are no functions which we can directly call and use.
+          h3
+            li.tal It is not a DOM manipulation library like jQuery. But it uses subset of jQuery for DOM manipulation (called jqLite).
+          h3
+            li.tal Focus more on HTML side of web apps.
+          h3
+            li.tal For MVC/MVVM design pattern
+
+      section
+        h2.dark The MVC
+        br
+        img(src="img/mvc.png", alt="", width="100%")
+
+      section
+        h2.dark Then MVVM...
+        br
+        img(src="img/mvvm.png", alt="", width="100%")
+
+      section(data-bespoke-state='s6')
+        h2 Angular Features
+        ul
+          h3
+            li Modules
+          h3
+            li Services
+          h3
+            li Expressions
+          h3
+            li Filters
+          h3
+            li Directives
+          h3
+            li Routes
+          h3
+            li
+              a(href="") And many more..
+
+      section(data-bespoke-state='s7')
+        h2 Bootstraping
+        h3 Its just that simple!!
+        hr
+        pre
+          code.language-javascript.
+            &lt;!DOCTYPE html&gt;
+            &lt;html ng-app&gt;
+
+      section(data-bespoke-state='s4')
+        h2 Mr.Controller
+        hr
+        pre
+          code.language-javascript.
+            var app = angular.module('todoApp', []);
+
+            app.controller('todoController', function($scope) {
+              // Your code goes here.
+            });
+
+      section(data-bespoke-state='s4')
+        h2 Mr.Directive
+        hr
+        pre
+          code.language-javascript.
+            var app = angular.module('todoApp', []);
+
+            app.directive('custdir', function() {
+              return {
+                restrict: 'E',
+                template: "&lt;b&gt; Hello Mobility!! &lt;/b&gt;",
+                link: function (scope, element, attrs) {
+                  // Your logic goes here..
+                }
+              }
+            });
+
+      section(data-bespoke-state='s5')
+        h2 Mr.Factory
+        hr
+        pre
+          code.language-javascript.
+            var app = angular.module('todoApp', []);
+
+            app.factory('customerFactory', function($http) {
+                var factory = {};
+                factory.getCustomers = function() {
+                  return $http.get('/customer')
+                }
+                return factory;
+            });
+
+      section(data-bespoke-state='s1')
+        h2 Let's build a
+          span.c1  TODO
+          span  App..
+
+      section(data-bespoke-state='s7')
+        h1 Questions ?
+
+      section(data-bespoke-state='s3')
+        h1 Thank you!!
+
+    // build:js scripts/scripts.js
+    script(src='bower_components/bespoke.js/dist/bespoke.min.js')
+    script(src='bower_components/bespoke-keys/dist/bespoke-keys.min.js')
+    script(src='bower_components/bespoke-touch/dist/bespoke-touch.min.js')
+    script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')
+    script(src='bower_components/bespoke-scale/dist/bespoke-scale.min.js')
+    script(src='bower_components/bespoke-hash/dist/bespoke-hash.min.js')
+    script(src='bower_components/bespoke-progress/dist/bespoke-progress.min.js')
+    script(src='bower_components/bespoke-state/dist/bespoke-state.min.js')
+    script(src='bower_components/bespoke-forms/dist/bespoke-forms.min.js')
+    script(src='bower_components/bespoke-classes/dist/bespoke-classes.min.js')
+    script(src='bower_components/prism/prism.js')
+    script(src='scripts/main.js')
+    // endbuild
